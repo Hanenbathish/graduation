@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Restaurant Website</title>
+        <link rel="stylesheet" href="select.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 5px;
+                margin-left: 350px;
+                border-radius: 70px; 
+                border: none; 
+                background-color: #FEA116; 
+                color: white; 
+                cursor: pointer; 
+                transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #fcc922;
+        }
+            
+        </style>
+    </head>
+    <body>
+        
+           
+        
+
+        <div class="heading">
+            <div class="left">
+                
+                <h1>Find Favourite Restaurant<br>Get Your The Delicious Food</h1>
+               
+            </div>
+           
+
+            <div class="right" id="food"></div>
+
+        </div>
+
+        <div class="bottom">
+            <div class="menu">
+                <div id="food1"></div>
+                <div id="food2"></div>
+            </div>
+        </div>
+        
+
+          
+    <div class="container">
+
+        <h3>Please,Select Location</h3>
+
+        <div class="select_option">
+            <select id="city" onchange="updaterigon()">
+                <option value="">City</option>
+                <option value="turkey">Turkey</option>
+                <option value="canada">Canada</option>
+                <option value="syria">Syria</option>
+            </select>
+            <select id="regon" onchange="updatecountry()">
+                <option value="">Reigon</option>
+            </select>
+      
+            <select id="country">
+                <option value="">Country</option>
+            </select>
+        </div> 
+        
+       
+      <a href="./resturant.html"> <button  id="myButton" >Go </button></a>
+   
+    
+           
+           
+        <div class="boxes">
+            <div class="box">
+                <h1>16+</h1>
+                <h2>Years of Experience</h2>
+            </div>
+            <div class="box">
+                <h1>200</h1>
+                <h2>Award Gained</h2>
+            </div>
+            <div class="box">
+                <h1>2000+</h1>
+                <h2>Property Ready</h2>
+            </div>
+        </div>
+
+
+        <script src="javascript.js"></script>
+        <script src="up-mgr.js"></script>
+    </body>
+</html>

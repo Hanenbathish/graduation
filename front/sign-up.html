@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register & Login Form</title>
+    <link rel="stylesheet" href="stylesign-in.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  <div class="wrapper">
+    <span class="bg-animate"></span>
+    <span class="bg-animate2"></span>
+
+    <div class="form-box login">
+      
+      <form action=""  id="sign-up-mgr" >
+        <div class="input-box animation" style="--i: 18; --j: 1">
+          <input type='text' name="name" id='name1' required />
+          <label>Username</label>
+          <i class="bx bxs-user"></i>
+        </div>
+      
+        <div class="input-box animation" style="--i: 19; --j: 2">
+          <input type='email' name="email" id='email1' required />
+          <label>Email</label>
+          <i class="bx bxs-envelope"></i>
+        </div>
+        <div class="input-box animation" style="--i: 20; --j: 3">
+          <input type='password' name="password" id='password1'  minlength="8"  required />
+          <label>Password</label>
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        
+        <div class="input-box animation" style="--i: 18; --j: 1">
+          <input type='text' name="name" id='name-res' required />
+          <label>Name Resturant</label>
+          <i class="bx bxs-user"></i>
+        </div>
+
+        <div class="input-boxs">
+          <div class="input-fields fields">
+              <input name="cv" type="file" id="photo" class="file-input" autocomplete="off">
+              <label for="photo" class="custom-file-label">Choose Fhoto For Resturant</label>
+              <span id="file-name">No file chosen</span>
+          </div>
+      </div>
+       
+        <div class="input-box animation" style="--i: 2; --j: 23">
+          <input type="number"  name="number" id='number1' maxlength="7" required  />
+          <label>Number Resturant</label>
+          <i class='bx bx-food-menu yellow-icon'></i>
+        </div>
+     
+    <div class="select_option" >
+      <select id="city"  onchange="updaterigon()" style="color:#3F51B5; margin-right: 15px;">
+          <option value="">City</option>
+          <option value="turkey">Turkey</option>
+          <option value="canada">Canada</option>
+          <option value="syria">Syria</option>
+      </select>
+      <select id="regon" onchange="updatecountry()" style="color: #3F51B5; margin-right: 15px;">
+          <option value="">Reigon</option>
+      </select>
+
+      <select id="country" style="color:#3F51B5; margin-right: 15px;">
+          <option value="">Country</option>
+      </select>
+  </div> 
+  
+     
+        <button type="submit" class="btn animation" style="--i: 3; --j: 24s ;margin-top: 15px;">
+          Login
+        </button>
+      </form>
+    </div>
+    <div class="info-text login">
+      <h2 class="animation" style="--i: 0; --j: 19">Welcome!</h2>
+      <p class="animation" style="--i: 1; --j: 20">
+       If You Are A Manager Please Sign-Up In Our Website
+      </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="up-mgr.js"></script>
+  <script src="sign-up-mgr.js"></script>
+</body>
+</html>
