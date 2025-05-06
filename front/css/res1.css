@@ -1,0 +1,44 @@
+
+.cont{
+    /* المسافة بين العناصر */
+    width: 1150px;
+    background-color: white;
+    box-shadow: 0 0 65px #ffc10780;  
+   margin-left: 55px;
+  
+} 
+.container2 {
+  max-width: 250px;
+  margin:  15px;
+  background-color: white;
+  box-shadow: 0 0 65px  #ffc10780;
+  padding: 5px;
+  border-radius: 25px;
+  display: inline-block;
+ 
+
+
+}
+.container2 img {
+    transition: .5s;
+}
+
+.container2:hover img {
+    transform: scale(1.1);
+}
+
+.container2:hover {
+    height: 100%;
+}
+.detiles{
+    display: flex; /* استخدام الفليكس (flex) */
+    justify-content: center; /* محاذاة العناصر في الوسط أفقيًا */
+    align-items: center; 
+}
+.see {
+    color: white;
+    background-color: #FEA116;
+    border: none;
+    border-radius: 5px;
+ 
+}

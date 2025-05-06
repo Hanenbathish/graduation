@@ -352,10 +352,13 @@
 
 
 /*** Team ***/
+
+
 .team-item {
     box-shadow: 0 0 45px  #ffc10780;
-    height: calc(100% - 38px);
+   /* height: auto;*/
     transition: .5s;
+   
 }
 
 .team-item img {
@@ -478,15 +481,7 @@
     padding-right: 0;
     border-right: none;
 }
-.see {
-    color: white;
-    background-color: #FEA116;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 45px rgba(255, 255, 255, .1) ;
-    height: calc(100% - 38px);
-    transition: .5s;
-}
+
 
  .icons1 a {
     cursor: pointer;

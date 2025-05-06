@@ -39,7 +39,7 @@ form.addEventListener("submit", (event) => {
             window.location.href = "./adm.html";
           }
         } else {
-          alert`${data.message}`;
+          alert(data.message);
         }
       });
   } catch (err) {

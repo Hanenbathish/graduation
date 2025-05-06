@@ -9,7 +9,7 @@ body{
     background-size:cover;
     scroll-margin: none;
     scroll-margin-inline-start: none;
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../front/img/bg-hero.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
 }
 
 /************heading**************/
@@ -23,7 +23,7 @@ body{
 .right{
     width: 440px;
     height: 440px;
-    background-image: url('imgs/about-1.jpg');
+    background-image: url('../img/about-1.jpg');
     background-size:cover;
     border-radius: 400px;
     display: flex;
@@ -62,10 +62,10 @@ body{
     top:-500
 }
 #food1{
-    background-image: url('imgs/about-2.jpg');
+    background-image: url('../imgs/about-2.jpg');
 }
 #food2{
-    background-image: url('imgs/photo_1.jpg');
+    background-image: url('../imgs/about-1.jpg');
 }
 .menu{
     margin:20px 100px;

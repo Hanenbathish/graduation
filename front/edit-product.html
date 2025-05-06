@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-prpduct</title>
+    <link  rel= "Stylesheet" href="./css/user.css">
+</head>
+<body>
+    <div style="background-color: #ccc; font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding-top: 50px;
+    background-size: cover;
+    height: 700px;">
+        <div class="container1">
+            <h1>Edit product</h1>
+            <form id="add"   onsubmit="form()">
+              <label class="name">Name:</label>
+              <input  type="text" id="title" name="name" placeholder="Enter name" required />
+              <label class="name">Image:</label>
+              <input  type="file" data-image="" id="image" name="name" placeholder="Enter name" required />
+              <label class="name">Price:</label>
+              <input  type="number" id="price" name="name" placeholder="Enter price" required />
+              <label style="margin-top: 20px" class="category">Category:</label>
+              <select style="  margin-top: 20px;  width: 90%;  padding: 10px;  border: 1px solid #ccc; border-radius: 4px;" 
+                  id="category"   name="category"class="input" required >
+               <option value="Breakfast">Breakfast</option>
+                 <option value="Deserts">Deserts</option> 
+                 <option value="Souhoor">Souhoor</option>
+              </select>
+              <label class="name">Description:</label>
+              <input type="text" id="description"name="name"placeholder="Enter description"required />
+              <button  id="editSubmit" onclick="edit()" type="submit">Edit Product</button>
+            </form>
+          </div>
+        </div>
+    <script src="edit-product.js"></script>
+</body>
+</html>

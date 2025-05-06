@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit-resturant</title>
+    <link  rel= "Stylesheet" href="./css/res.css">
+</head>
+<body>
+    <div class="boddy">
+      <div class="container1">
+        <h1>Edit Restaurant</h1>
+        <form id="add"   onsubmit="form()">
+          
+          <label class="name">Image:</label>
+          <input  data-image="" type="file" 
+          id="photo" 
+          name="name"
+          placeholder="Enter Image For Restaurant"
+          required />
+          
+          <label class="name">Name:</label>
+          <input  type="text"
+           id="name"
+           name="name"
+           placeholder="Enter Name Resturant" 
+            required />
+          <label class="name">Phone:</label>
+          <input  type="text"
+           id="phone"
+           maxlength="10"
+           name="name"
+          placeholder="Enter Phone" 
+          oninput="validateInput(this)"
+          required />
+          <!--
+             type="text" name="number" id='number1' maxlength="10" required oninput="validateInput(this)" 
+          <label style="margin-top: 20px" class="category">City:</label>
+          <select style="  margin-top: 20px;  width: 90%;  padding: 10px;  border: 1px solid #ccc; border-radius: 4px;" 
+              id="city"   name="category"class="input" onchange="updaterigon()" required >
+              <option value="">city</option>
+              <option value="turkey">Turkey</option>
+              <option value="canada">Canada</option>
+              <option value="syria">Syria</option>
+              </select>
+              <label style="margin-top: 20px" class="category">Region:</label>
+              <select style="  margin-top: 20px;  width: 90%;  padding: 10px;  border: 1px solid #ccc; border-radius: 4px;" 
+                  id="regon"   name="category"class="input" onchange="updatecountry()" required >
+                  <option value="">Reigon</option>
+                  </select>
+                  <label style="margin-top: 20px" class="category">Country:</label>
+                  <select style="  margin-top: 20px;  width: 90%;  padding: 10px;  border: 1px solid #ccc; border-radius: 4px;" 
+                      id="country"   name="category"class="input" onchange="updatecountry()" required >
+                      <option value="">country</option>
+                      </select>   
+-->
+       
+          <button  id="editSubmit" onclick="edit()" type="submit">UPDATE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="edit-resturant.js"></script>
+    <script src="up-mgr.js"></script>
+    <script>
+      function validateInput(input) {
+          // استخدم تعبيرًا منتظمًا للسماح فقط بالأرقام
+          input.value = input.value.replace(/[^0-9]/g, '');
+      }
+      </script>
+</body>
+</html>

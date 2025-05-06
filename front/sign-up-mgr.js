@@ -1,16 +1,8 @@
 let form = document.getElementById("sign-up-mgr");
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  
   const fileInput = document.getElementById("photo");
-  const file = fileInput.files[0];
-  const formData = new FormData();
-  
-  if (file) {
-    formData.append("photo", file);
-  }
-
+    const pathImage= fileInput.files[0].name;
   let data = {
     name: document.getElementById("name1").value,
     email: document.getElementById("email1").value,
@@ -18,7 +10,7 @@ form.addEventListener("submit", (event) => {
     resturant: { 
       name: document.getElementById("name-res").value,
       phone: document.getElementById("number1").value,
-      photo:document.getElementById("photo").value,
+      photo: pathImage, // استخدم رابط الصورة
       location: {
         city: document.getElementById('city').value, 
         regon: document.getElementById('regon').value, 
@@ -27,7 +19,7 @@ form.addEventListener("submit", (event) => {
     },
     role: "MANAGER",
   };
-  
+
   try {
     fetch("http://localhost:7000/api/v1.0.0/users/signup-mgr", {
       method: "POST",
@@ -49,7 +41,7 @@ form.addEventListener("submit", (event) => {
         window.location.href = "./dashbord-mgr.html";
       } else {
         Swal.fire({
-          text: `${data.message}`, // تصحيح هنا
+          text: data.message, // تصحيح هنا
           icon: "error",
           showCloseButton: true,
           confirmButtonColor: "#068331",

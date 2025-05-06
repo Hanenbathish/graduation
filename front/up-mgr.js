@@ -52,7 +52,6 @@ if (selectedCountry && data[selectedCountry]) {
     }
 }
 }
-
 function updatecountry() {
     const countrySelect = document.getElementById('city');
     const citySelect = document.getElementById('regon');

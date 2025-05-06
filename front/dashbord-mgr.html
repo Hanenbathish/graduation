@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="all.min.css">
     <link rel="stylesheet" href="normalize.css">
      
@@ -22,7 +22,7 @@
     <nav>
         <div class="logo-name">
             <div class="logo-image">
-                <img src="img/restaurant.png~" alt="">
+                <img src="imgs/user-icon.png" alt="">
             </div>
 
             <span class="logo_name">Maneger</span>
@@ -34,7 +34,13 @@
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Home</span>
                 </a></li>
-                <li><a href="profileAdmin.html">
+                <li>
+                    <a href="My-Resturant.html">
+                        <i class="fas fa-utensils"></i> 
+                        <span class="link-name">Restaurant</span>
+                    </a>
+                </li>
+                <li><a href="">
                     <i class=" uil uil-user"></i>
                     <span class="link-name">protofil</span>
                 </a></li>
@@ -42,15 +48,17 @@
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Add meal </span>
                 </a></li>
-                <li><a href="add-product.html">
-                    <i class="uil uil-files-landscapes"></i>
+                <li><a href="">
+                    <i class="fas fa-shopping-cart"></i>
                     <span class="link-name">Orders </span>
                 </a></li>
+              
                 
-                <li><button onclick="logout()">
+                
+                <li><a href="">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span class="link-name">Logout</span>
-                </button></li>
+                </a></li>
                 
             </ul>
             
@@ -78,22 +86,27 @@
                         <i class="uil uil-tachometer-fast-alt"></i>
                         <span class="text">My Meal</span>
                     </div>
-                    <button id="showAll"></button>
+                    
                 </div>
-  <div class="jobs-list-container">
-     
+                
+  <div class="jobs-list-container"> 
+    <!--
+    <input 
+     class="job-search"  type="text"  id="product-search" placeholder="Search here..."/>
+       --> 
+       <input      class="job-search"  type="text" id="categorySearch" placeholder="Search by category" />
 
-      <input class="job-search" type="text" onkeyup="search()" id="search" placeholder="Search here..." />
-        
       <div id="get">
           <div id="job-listings" class="allposts">
           </div>                
       </div>
+      <div class="products" id="productList">
     </div>
        
     
 
 
-
+<script src="dashbord-mgr.js"></script>
+<script src="search.js"></script>
 </body>
 </html>

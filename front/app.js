@@ -1,29 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.nav-item a');
-    const breakfastList = document.getElementById('breakfastList');
-    const dessertsList = document.getElementById('dessertsList');
-    const suhoorList = document.getElementById('suhoorList');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function (event) {
-            event.preventDefault(); // منع الرابط من الانتقال
-
-            // إخفاء جميع القوائم
-            breakfastList.style.display = 'none';
-            dessertsList.style.display = 'none';
-            suhoorList.style.display = 'none';
-
-            // إظهار القائمة المناسبة بناءً على الرابط الذي تم النقر عليه
-            if (this.getAttribute('href') === '#conta') {
-                breakfastList.style.display = 'block';
-            } else if (this.getAttribute('href') === '#conta1') {
-                dessertsList.style.display = 'block';
-            } else if (this.getAttribute('href') === '#tab-3') {
-                suhoorList.style.display = 'block';
-            }
-        });
-    });
-});
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCart = document.querySelector('.icon-cart');

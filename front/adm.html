@@ -4,9 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
+    <title>Admin-Dashbord</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="normalize.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        main {
+    max-width: 1250px;
+    margin: 2px auto;
+    padding: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 2px;
+    text-align: left;
+    border-bottom: 5px solid #ddd;
+  }
+  footer {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+    </style>
+
 </head>
 <body>
+    <body style="background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(imgs/about-2.jpg); background-size: cover;">
+        <nav>
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="imgs/user-icon.png" alt="">
+                </div>
     
+                <span class="logo_name">Admin</span>
+            </div>
+    
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Home</span>
+                    </a></li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-utensils"></i> 
+                            <span class="link-name">All-Restaurant</span>
+                        </a>
+                    </li>
+                
+                </ul>
+            </div>
+        </nav>
+        <section class="dashboard">
+            <div class="top">
+                <i class="uil uil-bars sidebar-toggle"></i>
+                <div class="search-box">
+                </div> 
+            </div>
+            <div class="dash-content">
+                <div class="overview">
+                    <div class="title-btn">
+                        <div class="title">
+                            <i class="uil uil-tachometer-fast-alt"></i>
+                            <span class="text">All Resturant</span>
+                        </div>
+                        
+                    </div>
+                    <main class="d2">
+                        <table>
+                          <thead class="dash1">
+                            <tr>
+                              <th>Resturant</th>
+                              <th>Phone</th>
+                              <th>Photo</th>
+                              <th>City</th>
+                              <th>Region</th>
+                              <th>Country</th>
+                              <th>Stauts</th>
+                              <th>Create-At</th>
+                              <th>Delete</th>
+                              <th>Update</th>
+
+                            </tr>
+                          </thead>
+                          <tbody id="tbody"></tbody>
+                        </table>
+                      </main>
+                  
+                      <footer>
+                        <p>&copy; Create By Rima </p>
+                      </footer>
+                      <script src="admin.js"></script>
+           
 </body>
 </html>
