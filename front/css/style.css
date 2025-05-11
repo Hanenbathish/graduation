@@ -518,5 +518,29 @@
      .icons1 {
         display: inline-block;
     }
+} 
+.title-checkout{
+text-align: center;
+    margin: 20px 0 40px;
+    font-size: 40px;
+    color: #FEA116;
+    text-transform: capitalize;
+    text-decoration: underline;  
 }
+/*
+.cart {
+    max-width: 350px;
+    height: 543px;
 
+    color: #090031;
+    margin: 0 auto 30px;
+    border: 5px solid ;
+    padding: 20px;
+}
+*/
+
+
+
+
+
+/* End Checkout */

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: Arial, sans-serif; /* اختيار خط */
+    background-color: #f4f4f4; /* لون الخلفية */
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    padding: 20px;
+}
+
+.user-info {
+    background-color: white; /* لون الخلفية للمربع */
+    border-radius: 8px; /* زوايا دائرية */
+    border: 4px solid   rgb(0, 3, 43);;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    padding: 20px; /* مسافة داخلية */
+    width: 300px; /* عرض المربع */
+}
+
+.user-info input {
+    width: 100%; /* جعل الحقول تأخذ عرض المربع بالكامل */
+    padding: 10px; /* مسافة داخلية للحقل */
+    margin-bottom: 15px; /* مسافة بين الحقول */
+    border: 1px solid  #ff9900; /* حدود الحقل */
+    border-radius: 4px; /* زوايا دائرية للحقل */
+}
+
+.user-info button {
+    background-color:  #ff9900; /* لون الزر */
+    color: white; /* لون النص في الزر */
+    border: none; /* إزالة الحدود */
+    border-radius: 4px; /* زوايا دائرية للزر */
+    padding: 10px; /* مسافة داخلية للزر */
+    cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+    width: 100%; /* جعل الزر يأخذ عرض المربع بالكامل */
+}
+
+.user-info button:hover {
+    background-color:  rgb(0, 3, 43); /* لون الزر */
+    color:  #ff9900;  /* لون الزر عند التمرير فوقه */
+}
+
+.order-btn {
+    margin-top: 20px; /* مسافة أعلى زر "place order" */
+}
+.total-text {
+    border: 2px solid  #ff9900; /* لون الحدود */
+    border-radius: 5px; /* زوايا دائرية */
+    padding: 10px; /* مسافة داخلية */
+    background-color: white; /* لون خلفية النص */
+    font-size: 18px; /* حجم الخط */
+    color: rgb(0, 0, 0); /* لون النص */
+    display: inline-block; /* جعل العنصر يتصرف ككتلة داخلية */
+    margin-top: 20px; /* مسافة أعلى العنصر */
+    width: 100%;
+}
+
+.total-text span {
+    font-weight: bold; /* جعل الرقم بارزًا */
+    color: #ff9900; /* لون مختلف للرقم (يمكن تغييره حسب الرغبة) */
+}
+.box{
+    background-color: white; /* لون الخلفية للمربع */
+    border-radius: 8px; /* زوايا دائرية */
+    border: 4px solid   rgb(0, 3, 43);;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    padding: 20px; /* مسافة داخلية */
+    width: 300px; /* عرض المربع */
+}
+.cart{
+    background-color: white; /* لون الخلفية للمربع */
+    border-radius: 8px; /* زوايا دائرية */
+    border: 4px solid   rgb(0, 3, 43);;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    padding: 20px; /* مسافة داخلية */
+    width: 300px; /* عرض المربع */
+}
+.cart-item{
+ color:black;
+ font-size: 20px;
+ 
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container-xxl position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link active"></a>
+                    <a href="about.html" class="nav-item nav-link"></a>
+                    <a href="service.html" class="nav-item nav-link"></a>
+                    <a href="contact.html" class="nav-item nav-link"></a>
+                </div>
+                <a href="sign-in.html" class="btn btn-primary py-2 px-4"> Sign-In</a>
+            </div>
+        </nav>
+    
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container text-center my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">CheckOut</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        
+                        <li class="breadcrumb-item text-white active" aria-current="page">checkOut</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="checkout">
+
+    <h1 class="title-checkout">Your Cart</h1>
+    
+    <div class="cart">
+
+    </div>
+  
+  <section class="checkout">
+        <div class="user-info">
+            <form id="order">
+                <p class="total-text">Total: <span id="total"></span></p>
+
+                <input type="text" id="phone" placeholder="enter phone" required>
+                
+                <input type="text" id="address" placeholder="enter address" required>
+
+                <button  type="submit" id="order" >Add Order</button>
+            </form>
+        </div>
+      
+    </form>
+</section>
+
+       
+
+
+</div>
+<script src="cart.js"></script>
+</body>
+</html>

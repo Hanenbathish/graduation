@@ -27,7 +27,7 @@ function getdata(searchTerm = '') {
                     const content = `
                     <img src="../front/image/${product.image}" alt="" class="meal-image" />
                     <h3 class="meal-title">${product.title}</h3>
-                    <p class="price">price: ${product.price}</p>
+                    <p class="price">price: $ ${product.price}</p>
                     <p class="catgory">category: ${product.category}</p>
                     <p class="Description">Description: ${product.description}</p>
                    ` ;

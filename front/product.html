@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>product</title>
     <link rel="stylesheet" href="style.css">
     <link href="img/favicon.ico" rel="icon">
 
@@ -68,13 +68,15 @@
     <h5 class="section-titl1">Food Menu</h5>
     <h1 class="mb-4">Most Popular Meal</h1>
 </div> 
+
          <div class="cont1 ">
                 <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                     <li class="nav-item">
                         <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#conta">
                             <i class="fa fa-list fa-2x text-primary"></i>
                             <div class="ps-3">
-                                <small class="text-body">All</small>
+
+                                <small id ="menu" class="text-body">All</small>
                             </div>
                         </a>
                     </li>
@@ -82,7 +84,7 @@
                             <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#conta">
                                 <i class="fa fa-utensils fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    <small class="text-body">Breakfast</small>
+                                    <small id="Beakfastr"   class="text-body"  >Beakfastr</small>
 
                                 </div>
                             </a>
@@ -91,7 +93,7 @@
                             <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#conta1">
                                 <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    <small class="text-body">Desserts</small>
+                                    <small  id="Desserts"  class="text-body"  >Desserts</small>
                                     
                                 </div>
                             </a>
@@ -100,16 +102,15 @@
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
                                 <i class="fas fa-apple-alt fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    <small class="text-body">Suhoor</small>
+                                    <small id="Suhoor" class="text-body" >Suhoor</small>
 
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                    
-        
-                <div class="conta">  
+      
+              <div class="conta">  
                     <div class="container" style="margin-top: 60px;">
                         <header>
                             <div class="title" style="color:aliceblue;">PRODUCT LIST</div>
@@ -120,9 +121,9 @@
                                 <span>0</span>
                             </div>
                         </header>
-
-                        <div class="listProduct">
-                            <!-- قائمة الإفطار -->
+                    
+                        <div class="listProduct"></div>
+                      
                         </div>
                        
                     </div>
@@ -132,12 +133,38 @@
                         <div class="listCart"></div>
                         <div class="btn">
                             <button class="close">CLOSE</button>
-                            <button class="checkOut">Check Out</button>
+                            <button class="checkOut" onclick="checkOut()">Check Out</button>
                         </div>
                     </div>
-                </div>
+                    
+                    <script>
+                    // دالة لاستخراج معرف المطعم من عنوان URL
+                    function getRestaurantIdFromUrl() {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        return urlParams.get('id'); // استبدل 'id' بالاسم الفعلي للمعرف في URL
+                    }
+                    
+                    // تخزين معرف المطعم في localStorage
+                    const restaurantId = getRestaurantIdFromUrl();
+                    if (restaurantId) {
+                        localStorage.setItem("restaurantId", restaurantId);
+                    }
+                    
+                    function checkOut() {
+                        const restaurantId = localStorage.getItem("restaurantId");
+                        if (restaurantId) {
+                            // إعادة توجيه المستخدم مع إضافة معرف المطعم كجزء من عنوان URL
+                            window.location.href = `cart.html?id=${restaurantId}`;
+                        } else {
+                            // عرض رسالة خطأ إذا لم يكن هناك معرف مطعم
+                            alert("لا يوجد معرف مطعم متاح.");
+                        }
+                    }
+                    </script>
+                    
                 
-                <script src="app.js"></script>
+                
+                <script src="product.js"></script>
                 
                
                 

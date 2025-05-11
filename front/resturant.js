@@ -18,8 +18,6 @@ fetch(`http://localhost:7000/api/v1.0.0/resturants?location[city]=${city}&locati
     .then(data => {
         jobListings.innerHTML = ''; // Clear previous content
         if (data.status === 'success' && data.doc.length > 0) {
-         
-           
             data.doc.forEach(product => {
                     const jobCard = document.createElement('div');
                     jobCard.classList.add('container2');
@@ -38,8 +36,8 @@ fetch(`http://localhost:7000/api/v1.0.0/resturants?location[city]=${city}&locati
                 });
             }
         })
-        function meal(productId) {
-            // Redirect to the edit page and pass the postId as a query parameter
-            localStorage.setItem('id',productId)
-            window.location.href = `product.html?id=${productId}`;
-          }
+        function meal(ResturantId) {
+            // إعادة التوجيه إلى صفحة الوجبات مع تمرير ResturantId كمعامل في عنوان URL
+            window.location.href =`product.html?id=${ResturantId}`;
+        }
+        
