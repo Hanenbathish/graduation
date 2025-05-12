@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url(../front/img/bg-hero.jpg);
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .mainTable {
+           
+            text-align: center;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgb(255 143 48);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #FEA116;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #FEA116;
+            color: white;
+        }
+
+        tr:not(:first-child) {
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+        }
+
+        tr:hover {
+            background-color:rgba(221, 221, 221, 0.781);
+        }
+        .update-product-btn {
+  background-color: #4CAF50; /* لون الخلفية */
+  color: white; /* لون النص */
+  border: none; /* إزالة الحدود */
+  padding: 10px 20px; /* إضافة مساحة داخلية */
+  text-align: center; /* محاذاة النص في المنتصف */
+  text-decoration: none; /* إزالة التسطير */
+  display: inline-block; /* جعل الزر يظهر في نفس الخط */
+  font-size: 16px; /* حجم الخط */
+  margin: 4px 2px; /* إضافة هامش حول الزر */
+  cursor: pointer; /* تغيير شكل المؤشر عند التمرير فوق الزر */
+  border-radius: 5px; /* زوايا دائرية */
+  transition: background-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
+}
+
+.update-product-btn:hover {
+  background-color:  blue; /* تغيير لون الخلفية عند التمرير فوق الزر */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Main Data Table -->
+    <div class="mainTable">
+        <h1>ORDERS</h1>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Total</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Created-At</th>
+                    <th>Status</th>
+                    <th>Dliviring</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="order-mgr.js"></script>
+</body>
+</html>
